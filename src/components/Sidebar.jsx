@@ -15,6 +15,11 @@ export const links = [
         name: "Home",
         icon: <FiHome />,
       },
+
+      {
+        name: "Templete",
+        icon: <FiHome />,
+      },
     ],
   },
 
@@ -44,7 +49,7 @@ const Sidebar = () => {
               onClick={handleCloseSidebar}
               className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text:white text-slate-900"
             >
-              <span>Dashboard Logo</span>
+              <img className="h-9" src="https://ja-africa.org/wp-content/uploads/2020/02/FedEx-Logo-PNG-Transparent.png"  />
             </Link>
             <TooltipComponent content="Menu" position="BottomCenter">
               <button

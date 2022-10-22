@@ -28,3 +28,20 @@
   background-color: transparent;
 }
 
+body{
+  background-color: #F7FAFC;
+}
+.backChange{
+  width: 98%;
+  margin-left: 1%;
+}
+
+
+
+@media screen  and (max-width:700px){
+  .headingMain{
+    margin-left:30px;
+    margin-top: 40px;
+  }
+  
+}
