@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import PieChart from "../components/PieChart";
 import { useStateContext } from "../Assets/ContextProvider";
-
+import CardLineChart from "../components/linechart";
 // Icons import
 import { AiOutlineMinusCircle, AiOutlineUsergroupAdd } from "react-icons/ai";
 import { BiDollar } from "react-icons/bi";
@@ -37,9 +37,8 @@ function Home(props) {
         </div>
 
         <div>
-
-          <div className="backChange">
-          <Header category="Page" title="Dashbaord" />
+          <div className={activeMenu ? "backChange1" : "backChange"}>
+            <Header category="Page" title="Dashbaord" />
             <div class="container items-center px-4 py-1 m-auto mt-1">
               <div class="flex flex-wrap pb-3 mx-4 md:mx-24 lg:mx-0">
                 <div class="w-full p-2 lg:w-1/4 md:w-1/2">
@@ -195,6 +194,11 @@ function Home(props) {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className={activeMenu ? "chartbox1" : "chartbox"}>
+            <CardLineChart />
+            <PieChart />
           </div>
         </div>
       </div>

@@ -1,12 +1,11 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
-import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 
 import { useStateContext } from "../Assets/ContextProvider";
-import { AiOutlineShoppingCart } from "react-icons/ai";
-import { FiHome } from "react-icons/fi";
-
+import { FiHome, FiStar } from "react-icons/fi";
+import { BsBuilding } from "react-icons/bs";
+import { MdEventAvailable, MdUnfoldMore } from "react-icons/md";
 export const links = [
   {
     title: "Dashboard",
@@ -17,12 +16,23 @@ export const links = [
       },
 
       {
-        name: "Templete",
-        icon: <FiHome />,
+        name: "Review",
+        icon: <FiStar />,
+      },
+      {
+        name: "Business",
+        icon: <BsBuilding />,
+      },
+      {
+        name: "Events",
+        icon: <MdEventAvailable />,
+      },
+      {
+        name: "More",
+        icon: <MdUnfoldMore />,
       },
     ],
   },
-
 ];
 const Sidebar = () => {
   const { activeMenu, setActiveMenu, screenSize, currentColor } =
@@ -49,17 +59,32 @@ const Sidebar = () => {
               onClick={handleCloseSidebar}
               className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text:white text-slate-900"
             >
-              <img className="h-9" src="https://ja-africa.org/wp-content/uploads/2020/02/FedEx-Logo-PNG-Transparent.png"  />
-            </Link>
-            <TooltipComponent content="Menu" position="BottomCenter">
-              <button
-                type="button"
-                onClick={() => setActiveMenu((prev) => !prev)}
-                className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden"
+              {/* <img style={{width:'50%',borderRadius:4}} src={require('../Assets/bannerlogo.png')}  /> */}
+
+              <p
+                className="text-base"
+                style={{
+                  fontWeight: "bold",
+                  color: "#FF5800",
+                  border: "2px solid #FF5800",
+                  paddingLeft: 10,
+                  paddingRight: 10,
+                  textAlign: "justify",
+                  borderRadius: 4,
+                }}
               >
-                <IoClose color={currentColor} />
-              </button>
-            </TooltipComponent>
+                One Stop
+                <br />
+                Zimbabwe
+              </p>
+            </Link>
+            <button
+              type="button"
+              onClick={() => setActiveMenu((prev) => !prev)}
+              className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden"
+            >
+              <IoClose color={currentColor} />
+            </button>
           </div>
           <div className="mt-10">
             {links.map((item) => (

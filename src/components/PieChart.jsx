@@ -91,23 +91,23 @@ export default function PieChart() {
         },
       },
     };
-    var ctx = document.getElementById("line-chart").getContext("2d");
+    var ctx = document.getElementById("Pie-chart").getContext("2d");
     window.myLine = new Chart(ctx, config);
   }, []);
   return (
     <>
-      <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-blueGray-700 ml-3">
-        <div className="rounded-t mb-0 px-4 py-3 bg-transparent">
+      <div className="relative flex flex-col min-w-0 break-words  mb-6 shadow-lg rounded bg-blueGray-700 ml-3 piechart">
+      <div className="rounded-t mb-0 px-4 py-3 bg-transparent">
           <div className="flex flex-wrap items-center">
             <div className="relative w-full max-w-full flex-grow flex-1">
-              <h2 className="text-white text-xl font-semibold">Sales value</h2>
+              <h2 className="text-slate-800 text-xl font-bold">Users</h2>
             </div>
           </div>
         </div>
         <div className="p-4 flex-auto ">
           {/* Chart */}
           <div className="relative " style={{ height: 350 }}>
-            <canvas id="line-chart"></canvas>
+            <canvas id="Pie-chart"></canvas>
           </div>
         </div>
       </div>
